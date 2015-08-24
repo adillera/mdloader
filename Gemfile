@@ -38,17 +38,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'prawn'
-
 gem 'twitter-bootstrap-rails'
-
 gem 'react-rails', '~> 1.0'
-
 gem 'devise'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   gem 'pry'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -58,7 +55,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails', '~> 3.0'
-
   gem 'factory_girl'
 end
 

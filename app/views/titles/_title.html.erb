@@ -1,0 +1,10 @@
+<tr>
+  <td>
+    <%= link_to title_path(title.id), class: "btn btn-default" do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+  </td>
+
+  <td><%= title.name %></td>
+  <td><%= link_to title.url, title.url %></td>
+</tr>

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="<%= 'active' if controller == 'titles' %>">
+        <%= link_to titles_path do %>
+          <i class="fa fa-book"></i>
+          <%= t('navbar.titles') %>
+        <% end %>
+      </li>
+    </ul>
+
+    <p class="navbar-text navbar-right container-fluid">
+      <%= t('commons.signed_in_as') %> <%= current_user.email %>
+
+      <%= link_to t('commons.logout'), destroy_user_session_path, method: :delete, class: 'navbar-link' %>
+    </p>
+  </div>
+</nav>

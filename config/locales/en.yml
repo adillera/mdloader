@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  links:
+    add_new_title: Add new title
+  commons:
+    signed_in_as: 'Signed in as:'
+    logout: Logout
+  navbar:
+    titles: Titles
+  forms:
+    name: Name
+    url: URL
+  lists:
+    actions: Actions
