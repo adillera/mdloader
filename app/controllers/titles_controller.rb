@@ -24,6 +24,13 @@ class TitlesController < ApplicationController
   end
 
   def destroy
+    begin
+      title = current_user.titles.find(params[:id])
+
+      title.destroy
+
+      redirect_to titles_path
+    end
   end
 
   private
