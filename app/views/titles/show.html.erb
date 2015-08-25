@@ -1,2 +1,11 @@
-<h1>Titles#show</h1>
-<p>Find me in app/views/titles/show.html.erb</p>
+<h1><%= @title.name %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="col-md-3"><%= t('lists.volumes') %></th>
+      <th><%= t('lists.chapters') %></th>
+    </tr>
+  </thead>
+  <%= render partial: 'volume', collection: @volumes, as: :obj %>
+</table>

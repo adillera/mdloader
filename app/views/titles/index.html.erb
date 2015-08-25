@@ -1,4 +1,4 @@
-<h2><%= t('navbar.titles') %></h2>
+<h1><%= t('navbar.titles') %></h1>
 
 <%= form_for @title, html:{ class: "form-inline" } do |f| %>
   <div class="form-group">
@@ -14,7 +14,7 @@
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
 
-<table class="table table-stripped">
+<table class="table table-striped">
   <thead>
     <tr>
       <th><%= t('lists.actions') %></th>

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= obj[:volume] %></td>
+
+  <td>
+    <ul>
+      <%= render partial: 'chapter', collection: obj[:chapters], as: :chapter %>
+    </ul>
+  </td>
+</tr>

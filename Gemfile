@@ -42,6 +42,8 @@ gem 'twitter-bootstrap-rails'
 gem 'react-rails', '~> 1.0'
 gem 'devise'
 gem 'will_paginate', '~> 3.0.6'
+gem 'nokogiri'
+gem 'httparty'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

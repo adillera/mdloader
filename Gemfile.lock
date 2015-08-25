@@ -221,6 +221,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  nokogiri
   pg
   prawn
   pry

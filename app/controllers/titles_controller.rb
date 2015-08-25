@@ -1,10 +1,14 @@
 class TitlesController < ApplicationController
+  include MangaList
+
   def index
     @title = Title.new
     @titles = current_user.titles.paginate(page: params[:page], per_page: params[:per_page])
   end
 
   def show
+    @title = current_user.titles.find(params[:id])
+    @volumes = chapter_list
   end
 
   def new
