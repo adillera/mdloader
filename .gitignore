@@ -16,3 +16,6 @@
 /log/*
 !/log/.keep
 /tmp
+/public/mangas
+.DS_Store
+public/.DS_Store

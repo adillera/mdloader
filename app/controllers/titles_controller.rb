@@ -37,6 +37,12 @@ class TitlesController < ApplicationController
     end
   end
 
+  def download
+    Downloader.perform_async(params[:title], params[:url])
+
+    redirect_to title_path(params[:id])
+  end
+
   private
   def permitted_data
     params[:title].permit(

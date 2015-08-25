@@ -1,4 +1,10 @@
-<li>
+<li class="list-group-item">
+  <%= t('lists.download') %>(
+  <%= link_to download_title_path(id: @title.id, url: chapter[:url], title: chapter[:title]) do %>
+    <i class="fa fa-file-archive-o"></i>
+  <% end %>
+  )
+
   <%= chapter[:title] %>
+
 </li>
-<li><%= chapter[:url] %></li>
