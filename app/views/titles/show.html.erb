@@ -9,3 +9,5 @@
   </thead>
   <%= render partial: 'volume', collection: @volumes, as: :obj %>
 </table>
+
+<%= will_paginate @volumes %>

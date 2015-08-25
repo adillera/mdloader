@@ -8,7 +8,7 @@ class TitlesController < ApplicationController
 
   def show
     @title = current_user.titles.find(params[:id])
-    @volumes = chapter_list
+    @volumes = chapter_list.paginate(page: params[:page], per_page: params[:per_page])
   end
 
   def new

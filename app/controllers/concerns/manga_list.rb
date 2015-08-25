@@ -12,7 +12,7 @@ module MangaList
     volumes.each_with_index do |v, i|
       list << {
         volume: v.text,
-        chapters: chapters[i].css("li").map{ |c| "#{ c.css('.tips').text } - #{ c.css('.title').text }" }
+        chapters: chapters[i].css("li").map{ |c| { url: c.css('.tips')[0][:href], title: "#{ c.css('.tips').text } - #{ c.css('.title').text }" } }
       }
     end
 
