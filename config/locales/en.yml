@@ -27,6 +27,7 @@ en:
     logout: Logout
   navbar:
     titles: Titles
+    downloads: Downloads
   forms:
     name: Name
     url: URL

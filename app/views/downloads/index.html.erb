@@ -1,0 +1,16 @@
+<h1><%= t('navbar.downloads') %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="col-md-2"><%= t('lists.actions') %></th>
+      <th class="col-md-10"><%= t('forms.name') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @downloads %>
+  </tbody>
+</table>
+
+<%= will_paginate @downloads %>

@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <%= link_to download_download_path(download.id), class: "btn btn-default" do %>
+      <i class="fa fa-arrow-circle-down"></i>
+    <% end %>
+
+    <%= link_to download_path(download.id), method: :delete, class: "btn btn-default" do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </td>
+  <td><%= download.title %></td>
+</tr>

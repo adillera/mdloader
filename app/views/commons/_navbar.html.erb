@@ -7,6 +7,13 @@
           <%= t('navbar.titles') %>
         <% end %>
       </li>
+
+      <li class="<%= 'active' if controller == 'downloads' %>">
+        <%= link_to downloads_path do %>
+          <i class="fa fa-arrow-circle-down"></i>
+          <%= t('navbar.downloads') %>
+        <% end %>
+      </li>
     </ul>
 
     <p class="navbar-text navbar-right container-fluid">
