@@ -4,7 +4,7 @@ class Downloader
   require 'zip'
   include Sidekiq::Worker
 
-  def perform(c_title, c_url)
+  def perform(c_title, c_url, user_id)
     chapter = Nokogiri::HTML(open(c_url))
     last_page = chapter.css('#top_bar .l select option').map{|o| o[:value].to_i }.sort.last
     a_chapter = c_url.split('/')
@@ -45,5 +45,7 @@ class Downloader
     end
 
     FileUtils.rm_rf(folder_name)
+
+    User.find(user_id).downloads.create(url: archive_name, title: c_title)
   end
 end

@@ -38,7 +38,7 @@ class TitlesController < ApplicationController
   end
 
   def download
-    Downloader.perform_async(params[:title], params[:url])
+    Downloader.perform_async(params[:title], params[:url], current_user.id)
 
     redirect_to title_path(params[:id])
   end
