@@ -1,13 +1,22 @@
 <h1><%= @title.name %></h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th class="col-md-3"><%= t('lists.volumes') %></th>
-      <th><%= t('lists.chapters') %></th>
-    </tr>
-  </thead>
-  <%= render partial: 'volume', collection: @volumes, as: :obj %>
-</table>
+<div class="col-md-3">
+  <%= image_tag @cover %>
+</div>
 
-<%= will_paginate @volumes %>
+<div class="col-md-9">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="col-md-3"><%= t('lists.volumes') %></th>
+        <th><%= t('lists.chapters') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render partial: 'volume', collection: @volumes, as: :obj %>
+    </tbody>
+  </table>
+
+  <%= will_paginate @volumes %>
+</div>

@@ -3,7 +3,7 @@ class TitlesController < ApplicationController
 
   def index
     @title = Title.new
-    @titles = current_user.titles.paginate(page: params[:page], per_page: params[:per_page])
+    @titles = current_user.titles.order(:name).paginate(page: params[:page], per_page: params[:per_page])
   end
 
   def show

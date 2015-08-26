@@ -6,6 +6,7 @@ module MangaList
     title = Nokogiri::HTML(open(@title.url))
     volumes = title.css("#chapters .slide h3")
     chapters = title.css(".chlist")
+    @cover = title.css('#series_info .cover img')[0]['src']
 
     list = []
 
